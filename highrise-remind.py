@@ -40,7 +40,7 @@ def clear_tag(p, check_datetime):
 
 def check_comments(messages, check_datetime):
     for m in messages: 
-        if m.comments:
+        if comments in m and m.comments:
             comments = sorted(m.comments, key=lambda x: x.created_at)
 
             if contains(comments, lambda x: x.created_at > check_datetime):
